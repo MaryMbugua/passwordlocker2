@@ -40,3 +40,9 @@ class TestUser(unittest.TestCase):
         test_user = User("testfirst","testlast","testusername","0712345678","test@user.com","testpassword")
         test_user.save_user()
         self.assertEqual(len(User.user_list),2)
+    def test_display_allusers(self):
+        '''
+        test for method that returns 
+        all users saved
+        '''
+        self.assertEqual(User.display_allusers(),User.user_list) 
