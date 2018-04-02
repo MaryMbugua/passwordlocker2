@@ -14,3 +14,13 @@ class TestUser(unittest.TestCase):
         been executed
         '''
         User.user_list = []
+    def test_init(self):
+        '''
+        to test if object is initialised properly
+        '''
+        self.assertEqual(self.new_user.first_name,"mary")
+        self.assertEqual(self.new_user.last_name,"mbugua")
+        self.assertEqual(self.new_user.user_name,"nish")
+        self.assertEqual(self.new_user.phone_number,"0789755096")
+        self.assertEqual(self.new_user.email,"mary@gmail.com")
+        self.assertEqual(self.new_user.password,"lovepy") 
