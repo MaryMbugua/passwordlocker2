@@ -28,3 +28,22 @@ class TestUser(unittest.TestCase):
         '''
         self.new_credential.save_newcredential()
         self.assertEqual(len(Credentials.credential_list),1)
+    def test_save_multiplecredential(self):
+        '''
+        to test if we can save multiple credentials
+        to the credential list
+        '''
+        self.new_credential.save_newcredential()
+        test_credential = Credentials("testapp","testuser","testpass")
+        test_credential.save_newcredential()
+        self.assertEqual(len(Credentials.credential_list),2)
+    def test_deletecredential(self):
+        '''
+        to test if we can delete a credential
+        from our credential list
+        '''
+        self.new_credential.save_newcredential()
+        test_credential = Credentials("testapp","testuser","testpass")
+        test_credential.save_newcredential()
+        self.new_credential.deletecredential()
+        self.assertEqual(len(Credentials.credential_list),1)

@@ -18,3 +18,8 @@ class Credentials:
         self.account_password= account_password
     def save_newcredential(self):
         Credentials.credential_list.append(self)
+    def deletecredential(self):
+        '''
+        delete a credential from credential list
+        '''
+        Credentials.credential_list.remove(self)
