@@ -21,3 +21,9 @@ class User:
         self.password= password
     def save_user(self):
         User.user_list.append(self)
+    @classmethod
+    def display_allusers(cls):
+        '''
+        method that returns the userslist
+        '''
+        return cls.user_list
