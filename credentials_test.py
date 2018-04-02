@@ -47,3 +47,13 @@ class TestUser(unittest.TestCase):
         test_credential.save_newcredential()
         self.new_credential.deletecredential()
         self.assertEqual(len(Credentials.credential_list),1)
+    def test_find_credentialbyappname(self):
+        '''
+        test to check if we can find a credential by using
+        the application name and display information
+        '''
+        self.new_credential.save_newcredential()
+        test_credential = Credentials("newapp","testuser","testpass")
+        test_credential.save_newcredential()
+        found_credential = Credentials.find_credentialbyappname("newapp")
+        self.assertEqual(found_credential.account_name,test_credential.account_name)
