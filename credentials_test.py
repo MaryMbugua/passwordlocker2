@@ -57,3 +57,21 @@ class TestUser(unittest.TestCase):
         test_credential.save_newcredential()
         found_credential = Credentials.find_credentialbyappname("newapp")
         self.assertEqual(found_credential.account_name,test_credential.account_name)
+    def test_credential_exists(self):
+        '''
+        test to check if we can get a boolean 
+        if a credential cannot be found
+        '''
+        self.new_credential.save_newcredential()
+        test_credential = Credentials("newapp","testuser","testpass")
+        test_credential.save_newcredential()
+        credential_exists = Credentials.credential_exist("newapp")
+        self.assertTrue(credential_exists)
+
+
+
+
+
+
+if __name__ == '__main__':
+    unittest.main()
