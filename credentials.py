@@ -45,3 +45,13 @@ class Credentials:
             if Credentials.app_name == appname:
                 return True
         return False
+    @classmethod
+    def display_allcredentials(cls):
+        '''
+        method that returns the credentials list
+        '''
+        return cls.credential_list
+    @classmethod
+    def copy_account_password(cls,appname):
+        credential_found = Credentials.find_credentialbyappname(appname)
+        pyperclip.copy(credential_found.account_password)
