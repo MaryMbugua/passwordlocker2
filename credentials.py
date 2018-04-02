@@ -23,3 +23,15 @@ class Credentials:
         delete a credential from credential list
         '''
         Credentials.credential_list.remove(self)
+    @classmethod
+    def find_credentialbyappname(cls,name):
+            '''Method that takes in appname and returns a credential
+            that matches that appname.
+            Args:
+            appname TO SEARCH FOR 
+            Returns :
+            credentials of person that matches that appname.
+            '''
+            for credentials in cls.credential_list:
+                if credentials.app_name == name:
+                    return credentials
