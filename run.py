@@ -206,8 +206,7 @@ def main():
                         print(f"New Credential for {appli_name} created.")
                         print('\n')
                         print("-"*10)
-                        print("Correct username and password.\n To proceed use the following shortcodes: \n cc - create a new credential \n dc - display credentials \n fc - find a credential by inputing the appname \n rc - to delete a credential \n ex - exit the application")
-
+                        continue
                     
                     elif short_codethree == 'dc':
                         if display_allcredentials():
