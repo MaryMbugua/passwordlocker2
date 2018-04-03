@@ -3,7 +3,7 @@ from user import User
 from credentials import Credentials
 
 
-        ####USER
+####USER
 
 ##creating a user
 def create_user(fname,lname,uname,phone,email,passw):
@@ -19,7 +19,7 @@ def display_allusers():
 def generate_randompass():
     return User.generate_randompass()
 
- ######CREDENTIALS
+######CREDENTIALS
 
 ##creating a new credential
 def create_credential(apname,acname,psname):

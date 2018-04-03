@@ -40,7 +40,7 @@ class Credentials:
         '''
         method that checks if  a credential
          exists that uses appname and returns a boolean
-         '''
+        '''
         for Credentials in cls.credential_list:
             if Credentials.app_name == appname:
                 return True
