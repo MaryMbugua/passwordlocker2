@@ -244,8 +244,7 @@ def main():
             break
         else:
             print("I really didn't get that.Please use the short codes")
-        
-            
+             
 
 if __name__ == '__main__':
 
